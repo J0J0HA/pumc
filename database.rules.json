@@ -1,6 +1,10 @@
 {
   "rules": {
-    ".read": false,
-    ".write": false
+    "plgugins": {
+      "${plugin}": {
+        ".write": "auth.uid !== null and root.child('author') === auth.uid",
+        ".read": true
+      }
+    }
   }
 }
