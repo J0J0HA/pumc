@@ -2,7 +2,7 @@
   "rules": {
     "plgugins": {
       "${plugin}": {
-        ".write": "auth.uid !== null && root.child('author') === auth.uid",
+        ".write": "auth.uid !== null && root.child('author').val() === auth.uid",
         ".read": true
       }
     }
